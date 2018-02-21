@@ -1,0 +1,12 @@
+<Blog>
+
+<date>01,July,2004</date>
+<post>
+
+						
+It may be cliché, but 'sometimes' text data is incompatible with XML 
+unless it has the < and > characters and many others properly escaped.
+						
+</post>
+						   
+</Blog>

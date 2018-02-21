@@ -5,4 +5,7 @@ target
 project/target/
 .cache-tests
 .cache-main
+*~
+o
 
+/project/

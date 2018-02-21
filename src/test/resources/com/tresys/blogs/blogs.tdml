@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tdml:testSuite
+ suiteName="blogs"
+ description="Blog Corpus Tests"
+ xmlns:tdml="http://www.ibm.com/xmlns/dfdl/testData"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/"
+ xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ xmlns:blog="http://com.tresys.blogs"
+>
+  
+  <tdml:parserTestCase name="blog01" root="blog" model="com/tresys/blogs/xsd/blogs.dfdl.xsd" validation="on">
+    <tdml:document>
+      <tdml:documentPart type="file">com/tresys/blogs/quasiXML.xml</tdml:documentPart>
+    </tdml:document>
+    <tdml:infoset>
+      <tdml:dfdlInfoset type="file">com/tresys/blogs/realXML.xml</tdml:dfdlInfoset>
+    </tdml:infoset>
+  </tdml:parserTestCase>
+  
+</tdml:testSuite>

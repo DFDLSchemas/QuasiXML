@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://com.tresys.blogs"
+  xmlns:blog="http://com.tresys.blogs"
+  xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/"
+  xmlns:fn="http://www.w3.org/2005/xpath-functions"
+  xmlns:daf="urn:ogf:dfdl:2013:imp:daffodil.apache.org:2018:ext"
+  elementFormDefault="unqualified"
+  >
+  
+  <!-- <![CDATA[ 
+     Schema for Blogs Corpus found at http://u.cs.biu.ac.il/~koppel/BlogCorpus.htm
+     
+     This data is "quasi-XML". It has <...> tags around things, but does not
+     otherwise adhere to XML rules about quoting of characters, etc. 
+     
+     This DFDL schema easily turns this quasi-XML into real XML.
+  ]]> -->
+
+  <!-- <xs:include schemaLocation="org/apache/daffodil/xsd/DFDLGeneralFormat.dfdl.xsd" /> -->
+   <xs:include schemaLocation="edu/illinois/ncsa/daffodil/xsd/built-in-formats.xsd" /> 
+
+  <xs:annotation>
+    <xs:appinfo source="http://www.ogf.org/dfdl/">
+      <!-- ref="blog:GeneralFormat"  -->
+      <dfdl:format ref="blog:daffodilTest1" 
+        lengthKind="delimited" 
+        calendarCheckPolicy="lax"
+        calendarPatternKind="explicit"
+        encoding="utf-8" />
+    </xs:appinfo>
+  </xs:annotation>
+
+
+  <xs:element name="blog" 
+    dfdl:initiator="&lt;Blog>%WSP*;" 
+    dfdl:terminator="&lt;/Blog>%WSP*;">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="entry" maxOccurs="unbounded">
+          <!-- This entry element is needed since DFDL only allows named elements to be repeating. -->
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="date" type="xs:date" 
+                dfdl:initiator="&lt;date>" 
+                dfdl:terminator="&lt;/date>%WSP*;"
+                dfdl:calendarPattern="d,MMMM,yyyy" />
+              <xs:element name="post" type="xs:string" 
+                dfdl:initiator="&lt;post>%WSP*;" 
+                dfdl:terminator="%WSP*;&lt;/post>%WSP*;" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+ 
+</xs:schema>
