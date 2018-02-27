@@ -2,7 +2,7 @@ package com.tresys.blogs
 
 import org.junit.Test
 // import org.apache.daffodil.tdml.Runner
-import edu.illinois.ncsa.daffodil.tdml.Runner
+import org.apache.daffodil.tdml.Runner
 import org.junit.AfterClass
 
 object TestBlogs {

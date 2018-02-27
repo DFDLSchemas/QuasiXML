@@ -16,11 +16,8 @@ resolvers in ThisBuild += "NCSA Sonatype Releases" at "https://opensource.ncsa.i
 libraryDependencies in ThisBuild := Seq(
   "junit" % "junit" % "4.11" % "test",
   "com.novocode" % "junit-interface" % "0.11" % "test",
-  "edu.illinois.ncsa" %% "daffodil-tdml" % "2.0.0" % "test"
+  "org.apache.daffodil" %% "daffodil-tdml" % "2.1.0" % "test"
 )
-
-// Change the edu.illinois line above to this for Daffodil 2.1.0
-// "org.apache.daffodil" %% "daffodil-tdml" % "2.1.0" % "test"
 
 retrieveManaged := true
 
