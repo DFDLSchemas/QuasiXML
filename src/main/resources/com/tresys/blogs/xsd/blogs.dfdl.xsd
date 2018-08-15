@@ -25,7 +25,8 @@
         lengthKind="delimited" 
         calendarCheckPolicy="lax"
         calendarPatternKind="explicit"
-        encoding="utf-8" />
+        encoding="utf-8" 
+        calendarTimeZone="UTC"/>
     </xs:appinfo>
   </xs:annotation>
 
