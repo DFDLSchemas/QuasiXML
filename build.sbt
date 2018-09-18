@@ -6,15 +6,14 @@ version := "0.0.1"
 
 crossPaths := false
 
+scalaVersion := "2.11.12"
+
 testOptions in ThisBuild += Tests.Argument(TestFrameworks.JUnit, "-v")
 
-// This resolver needed for Daffodil 2.0.0, but can be deleted for Daffodil 2.1.0
-resolvers in ThisBuild += "NCSA Sonatype Releases" at "https://opensource.ncsa.illinois.edu/nexus/content/repositories/releases"
-
 libraryDependencies in ThisBuild := Seq(
-  "junit" % "junit" % "4.11" % "test",
+  "junit" % "junit" % "4.12" % "test",
   "com.novocode" % "junit-interface" % "0.11" % "test",
-  "org.apache.daffodil" %% "daffodil-tdml" % "2.2.0-SNAPSHOT" % "test"
+  "org.apache.daffodil" %% "daffodil-tdml" % "2.2.0" % "test"
 )
 
 retrieveManaged := true
