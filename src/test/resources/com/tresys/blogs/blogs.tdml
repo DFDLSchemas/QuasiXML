@@ -8,7 +8,7 @@
  xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/"
  xmlns:xs="http://www.w3.org/2001/XMLSchema"
  xmlns:blog="http://com.tresys.blogs"
->
+ defaultImplementations="ibm daffodil">
   
   <tdml:parserTestCase name="blog01" root="blog" model="com/tresys/blogs/xsd/blogs.dfdl.xsd" validation="on">
     <tdml:document>
