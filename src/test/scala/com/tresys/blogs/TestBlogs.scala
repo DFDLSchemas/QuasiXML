@@ -17,6 +17,6 @@ class TestBlogs {
 
   import TestBlogs._
 
-  @Test def test_blog01() = { runner.trace.runOneTest("blog01") }
+  @Test def test_blog01() = { runner.runOneTest("blog01") }
 
 }
