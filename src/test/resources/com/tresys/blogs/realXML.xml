@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<blog:blog xmlns:blog="http://com.tresys.blogs">
+<blog:blog xmlns:blog="http://com.tresys.blogs"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <entry>
-    <date>2004-07-01+00:00</date>
+    <date xsi:type="xs:date">2004-07-01+00:00</date>
     <post>It may be cliché, but &apos;sometimes&apos; text data is incompatible with XML 
 unless it has the &lt; and > characters and many others properly escaped.</post>
   </entry>
