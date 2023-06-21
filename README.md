@@ -6,7 +6,7 @@ A DFDL Schema for "quasi-XML"
 Quasi-XML is the term for data that looks like XML, but doesn't really follow XML syntax rules fully.
 Such data cannot be read by an XML parser. 
 
-For example, such data may have <foo>....</foo> tags to start and end various data items, but the
+For example, such data may have ```<foo>....</foo>``` tags to start and end various data items, but the
 simple content strings inside the tags may not have proper escaping of XML-restricted characters.
 Characters that are just plain disallowed in XML may be in the data (like ASCII NUL).
 
