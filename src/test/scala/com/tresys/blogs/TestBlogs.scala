@@ -8,8 +8,8 @@ import org.junit.AfterClass
 object TestBlogs {
   val runner = Runner("com/tresys/blogs", "blogs.tdml")
 
-  @AfterClass def shutDown {
-    runner.reset
+  @AfterClass def shutDown = {
+    runner.reset()
   }
 }
 
