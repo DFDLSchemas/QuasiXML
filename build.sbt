@@ -1,7 +1,9 @@
-name := "dfdl-quasixml"
+val root = (project in file("."))
+  .settings(
+    name := "dfdl-quasixml",
 
-organization := "com.tresys"
+    organization := "com.tresys",
 
-version := "0.1.0-SNAPSHOT"
-
-enablePlugins(DaffodilPlugin)
+    version := "0.1.0-SNAPSHOT"
+  )
+  .daffodilProject()
